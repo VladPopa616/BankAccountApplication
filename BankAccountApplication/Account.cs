@@ -72,14 +72,14 @@ namespace BankAccountApplication
             double monthInterest = annualInterest / 12;
             string formattedIntRate = string.Format("{0:0.00}%",monthInterest * 100);
             double intAmount = currentBalance * monthInterest;
-            string formattedIntAmount = string.Format("{0:C}", intAmount);
+            string formattedIntAmount = monthInterest.NAMoneyFormat(true);
 
-            string balance = "Starting balance: " + string.Format("{0:C}", startBalance) + 
-                "\nCurrent Balance: " + String.Format("{0:C}", currentBalance);
+            string balance = "Starting balance: " + startBalance.NAMoneyFormat(true) +
+                "\nCurrent Balance: " + currentBalance.NAMoneyFormat(true);
 
             string percentage = "Percent difference between starting and current balance: " + PercentChange();
             string intPay = "Month's interest rate: (" + formattedIntRate + ") paid: " + formattedIntAmount;
-            string serviceCharge = " Monthly Service charge paid: " + string.Format("{0:C}", monthServiceCharge);
+            string serviceCharge = " Monthly Service charge paid: " + monthServiceCharge.NAMoneyFormat(true);
 
             string str = string.Format("{0}\n{1}\n{2}\n{3}\n", balance,percentage,intPay,serviceCharge);
 

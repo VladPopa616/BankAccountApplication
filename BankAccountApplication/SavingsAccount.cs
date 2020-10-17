@@ -62,8 +62,15 @@ namespace BankAccountApplication
                 {
                     base.MakeWithDrawal(amount);
                     Console.WriteLine(string.Format("{0:C}", amount) + " withdrawed successfully");
+                    
+                }
+                else
+                {
+                    base.MakeWithDrawal(amount);
+                    Console.WriteLine(string.Format("{0:C}", amount) + " withdrawed successfully");
                     stat = AccountStatus.inactive;
                 }
+            }
             }
         }
     }

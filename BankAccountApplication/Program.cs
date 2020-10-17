@@ -63,7 +63,7 @@ namespace BankAccountApplication
                                     Console.WriteLine("B: Withdrawal");
                                     Console.WriteLine("C: Close and Report");
                                     Console.WriteLine("R: Return to main menu");
-                                    string balance = string.Format("{0:C}", savings.MonthCurrentBalance);
+                                    string balance = savings.MonthCurrentBalance.NAMoneyFormat(true);
                                     Console.WriteLine("Current balance : " + balance);
                                     letterChoice = Console.ReadLine();
 
@@ -91,8 +91,8 @@ namespace BankAccountApplication
                                                     }
                                                     else
                                                     {
-                                                        savings.MakeDeposit(deposit);
-                                                        Console.WriteLine(string.Format("{0:C}", deposit) + " deposited successfully");
+                                                        savings.MakeDeposit(deposit.NAMoneyFormatD(true));
+                                                        Console.WriteLine(deposit.NAMoneyFormatD(true) + " deposited successfully");
                                                         validDeposit = true; //loop exited
                                                     }
                                                 }
@@ -137,8 +137,8 @@ namespace BankAccountApplication
                                                     }
                                                     else
                                                     {
-                                                        savings.MakeWithDrawal(withdraw);
-                                                        Console.WriteLine(string.Format("{0:C}", withdraw) + " withdrawn successfully");
+                                                        savings.MakeWithDrawal(withdraw.NAMoneyFormatD(true));
+                                                        Console.WriteLine(withdraw.NAMoneyFormatD(true) + " withdrawn successfully");
                                                         validWithdrawal = true; //loop exited
                                                     }
                                                 }
@@ -192,7 +192,7 @@ namespace BankAccountApplication
                                     Console.WriteLine("B: Withdrawal");
                                     Console.WriteLine("C: Close and Report");
                                     Console.WriteLine("R: Return to main menu");
-                                    string balance = string.Format("{0:C}", cheques.MonthCurrentBalance);
+                                    string balance = cheques.MonthCurrentBalance.NAMoneyFormat(true);
                                     Console.WriteLine("Current balance : " + balance);
                                     letterChoice = Console.ReadLine();
 
@@ -220,8 +220,8 @@ namespace BankAccountApplication
                                                     }
                                                     else
                                                     {
-                                                        cheques.MakeDeposit(deposit);
-                                                        Console.WriteLine(string.Format("{0:C}", deposit) + " deposited successfully");
+                                                        cheques.MakeDeposit(deposit.NAMoneyFormatD(true));
+                                                        Console.WriteLine(deposit.NAMoneyFormat(true) + " deposited successfully");
                                                         validDeposit = true; //loop exited
                                                     }
                                                 }
@@ -266,8 +266,8 @@ namespace BankAccountApplication
                                                     }
                                                     else
                                                     {
-                                                        cheques.MakeWithDrawal(withdraw);
-                                                        Console.WriteLine(string.Format("{0:C}", withdraw) + " withdrawn successfully");
+                                                        cheques.MakeWithDrawal(withdraw.NAMoneyFormatD(true));
+                                                        Console.WriteLine(withdraw.NAMoneyFormat(true) + " withdrawn successfully");
                                                         validWithdrawal = true; //loop exited
                                                     }
                                                 }
@@ -322,7 +322,7 @@ namespace BankAccountApplication
                                     Console.WriteLine("B: Withdrawal");
                                     Console.WriteLine("C: Close and Report");
                                     Console.WriteLine("R: Return to main menu");
-                                    string balance = string.Format("{0:C}", globals.MonthCurrentBalance);
+                                    string balance = globals.MonthCurrentBalance.NAMoneyFormat(true);
                                     Console.WriteLine("Current balance : " + balance);
                                     letterChoice = Console.ReadLine();
 
@@ -350,8 +350,8 @@ namespace BankAccountApplication
                                                     }
                                                     else
                                                     {
-                                                        globals.MakeDeposit(deposit);
-                                                        Console.WriteLine(string.Format("{0:C}", deposit) + " deposited successfully");
+                                                        globals.MakeDeposit(deposit.NAMoneyFormatD(true));
+                                                        Console.WriteLine(deposit.NAMoneyFormat(true) + " deposited successfully");
                                                         validDeposit = true; //loop exited
                                                     }
                                                 }
@@ -396,8 +396,8 @@ namespace BankAccountApplication
                                                     }
                                                     else
                                                     {
-                                                        globals.MakeWithDrawal(withdraw);
-                                                        Console.WriteLine(string.Format("{0:C}", withdraw) + " withdrawn successfully");
+                                                        globals.MakeWithDrawal(withdraw.NAMoneyFormatD(true));
+                                                        Console.WriteLine(withdraw.NAMoneyFormat(true) + " withdrawn successfully");
                                                         validWithdrawal = true; //loop exited
                                                     }
                                                 }

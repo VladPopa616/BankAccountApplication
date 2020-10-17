@@ -445,6 +445,7 @@ namespace BankAccountApplication
                             break;
                         default:
                             WrongMenuChoice();
+                            break;
 
                     }
                 }
@@ -471,7 +472,8 @@ namespace BankAccountApplication
 
         public static double NotNumberError()
         {
-            NotNumberException e = new NotNumberException("Currency inputs must be a number value. An error occured"); 
+            NotNumberException e = new NotNumberException("Currency inputs must be a number value. An error occured");
+            throw e;
         }
     }
 }

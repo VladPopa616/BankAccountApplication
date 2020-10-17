@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="ChequingAccount.cs" />
+    <Compile Include="IExchangeable.cs" />
     <Compile Include="SavingsAccount.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="Program.cs" />

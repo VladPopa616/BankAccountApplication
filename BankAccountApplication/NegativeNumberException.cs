@@ -28,7 +28,7 @@ namespace BankAccountApplication
         {
             get
             {
-                return string.Format("{0}|{1}: {2}", details, errorCause);
+                return string.Format("{0}|{1}", details, errorCause);
             }
 
         }

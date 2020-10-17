@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="ChequingAccount.cs" />
+    <Compile Include="ExtensionClass.cs" />
     <Compile Include="NotNumberException.cs" />
     <Compile Include="NegativeNumberException.cs" />
     <Compile Include="WrongMenuChoiceException.cs" />

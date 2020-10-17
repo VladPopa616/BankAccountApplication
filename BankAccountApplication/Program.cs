@@ -461,18 +461,18 @@ namespace BankAccountApplication
 
         public static void WrongMenuChoice()
         {
-            WrongMenuChoiceException e = new WrongMenuChoiceException("The selected choice is invalid. An error occured");
+            WrongMenuChoiceException e = new WrongMenuChoiceException("The selected choice is invalid. An error occured","You entered an invalid letter");
             throw e;
         }
         public static void NegativeNumberError()
         {
-            NegativeNumberException e = new NegativeNumberException("Currency amounts cannot be a negative number. An error occured");
+            NegativeNumberException e = new NegativeNumberException("Currency amounts cannot be a negative number. An error occured","You entered a negative number as a money amount");
             throw e;
         }
 
         public static double NotNumberError()
         {
-            NotNumberException e = new NotNumberException("Currency inputs must be a number value. An error occured");
+            NotNumberException e = new NotNumberException("Currency inputs must be a number value. An error occured","You did not enter a number");
             throw e;
         }
     }

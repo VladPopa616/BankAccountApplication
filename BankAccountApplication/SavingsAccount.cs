@@ -9,9 +9,9 @@ namespace BankAccountApplication
     class SavingsAccount : Account, IAccount
     {
         AccountStatus stat;
-        public SavingsAccount(double bal, double int_rate): base(bal, int_rate)
+        public SavingsAccount(double bal, double int_rate) : base(bal, int_rate)
         {
-            if(bal < 25)
+            if (bal < 25)
             {
                 stat = AccountStatus.inactive;
             }
@@ -32,12 +32,12 @@ namespace BankAccountApplication
             {
                 return base.CloseAndReport();
             }
-            
+
         }
 
         public override void MakeDeposit(double amount)
         {
-            if(stat == AccountStatus.inactive && MonthCurrentBalance + amount > 25)
+            if (stat == AccountStatus.inactive && MonthCurrentBalance + amount > 25)
             {
                 base.MakeDeposit(amount);
                 stat = AccountStatus.active;
@@ -50,7 +50,7 @@ namespace BankAccountApplication
 
         public override void MakeWithDrawal(double amount)
         {
-            if(stat == AccountStatus.inactive)
+            if (stat == AccountStatus.inactive)
             {
                 Console.WriteLine("This bank account is inactive");
                 Console.WriteLine("If you want to make a withdrawal, you must have a balance over $25");
@@ -58,11 +58,11 @@ namespace BankAccountApplication
 
             else
             {
-                if(MonthCurrentBalance - amount > 25)
+                if (MonthCurrentBalance - amount > 25)
                 {
                     base.MakeWithDrawal(amount);
                     Console.WriteLine(string.Format("{0:C}", amount) + " withdrawed successfully");
-                    
+
                 }
                 else
                 {
@@ -71,8 +71,9 @@ namespace BankAccountApplication
                     stat = AccountStatus.inactive;
                 }
             }
-            }
+
         }
     }
+}
 
 
